@@ -13,10 +13,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: FilledButton(onPressed: (){
-          ApiService().getPopularMovies();
-        }, child: Text("Get Popular Movies")),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  )),
+              Text(
+                'Movie Hub',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 23,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
