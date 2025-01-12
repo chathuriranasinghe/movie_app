@@ -73,10 +73,49 @@ class _HomePageState extends State<HomePage> {
                                     bottom: 3,
                                     left: 3,
                                     child: Container(
-                                      padding: EdgeInsetsDirectional.symmetric(horizontal: 8),
-                                      decoration: BoxDecoration(color: Colors.black.withOpacity(0.6), borderRadius: BorderRadius.circular(20)),
-                                      child: Text(movie.title, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),)),
-                                  )
+                                        padding:
+                                            EdgeInsetsDirectional.symmetric(
+                                                horizontal: 8),
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.deepOrange.withOpacity(0.4),
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Text(
+                                          movie.title,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white),
+                                        )),
+                                  ),
+                                  Positioned(
+                                    top: 3,
+                                    right: 3,
+                                    child: Container(
+                                        padding:
+                                            EdgeInsetsDirectional.symmetric(
+                                                horizontal: 8),
+                                        decoration: BoxDecoration(
+                                            color:
+                                                Colors.black.withOpacity(0.6),
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              movie.voteAverage.toString().substring(0, 3),
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                  fontSize: 12,
+                                                  ),
+                                            ),
+                                            SizedBox(width: 5),
+                                            Icon(Icons.star, color: Colors.yellow.shade600, size: 13),
+                                          ],
+                                        ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
